@@ -13,7 +13,7 @@ function ChatMessages({ chatMessages }) {
       containerElem.scrollTop = containerElem.scrollHeight;
     }
   }, [chatMessages]);
-console.log(chatMessages)
+
   return (
     <div className="chat-messages-container" ref={chatMessagesRef}>
       {chatMessages.map((chatMessage) => {

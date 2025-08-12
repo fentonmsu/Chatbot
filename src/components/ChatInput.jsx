@@ -38,17 +38,29 @@ export function ChatInput({ chatMessages, setChatMessages }) {
     ]);
     setInputText("");
     // if we set it to empty and make the text box empty
+    // scroll to the bottom of the chat messages
+
+    setTimeout(() => {
+      const chatInputContainer = document.querySelector(".chat-input-container");
+      chatInputContainer.scrollIntoView({ behavior: "smooth" });
+    }, 100);
   }
+
+  function handleKeyDown(event) {
+    if (event.key === "Enter") {
+      sendMessage();
+    }
+  }
+
   return (
-    
       <div className="chat-input-container">
         <input
           className="chat-input"
           placeholder="Send a message to Chatbot"
           value={inputText || ""}
           onChange={saveInputText}
+          onKeyDown={handleKeyDown}
         />
-        {inputText}
         <button
           onClick={sendMessage}
           // click the button run the function

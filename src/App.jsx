@@ -32,7 +32,7 @@ function App() {
   // share the two components
 
   return (
-    <div className="app-main-container">
+    <div className="app-container">
       <ChatMessages chatMessages={chatMessages} />
       <ChatInput
         chatMessages={chatMessages}

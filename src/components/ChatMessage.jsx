@@ -27,7 +27,7 @@ export function ChatMessage({ message, sender }) {
   // ternary operation works like an if statement insert an if-else statement directly in the JSX
   // auto scrolling hooks, lets us insert react features into our component react.usesState is an hook
   return (
-    <div className="app-container">
+    <div>
       {sender === "user" ? "chat-message-user" : "chat-message-robot"}
       {sender === "robot" && (
         <img className="chat-message-profile" src={RobotProfileImage}></img>
